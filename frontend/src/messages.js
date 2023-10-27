@@ -4,6 +4,7 @@ import { fileToDataUrl, blurBackground, closePopUp, popUpError, getChannels, get
 
 const base = document.getElementById('base');
 
+//creates the message bubbles
 export function createMessageBox(message) {
     const token = localStorage.getItem('token');
     const userId = localStorage.getItem('userId');
@@ -31,7 +32,6 @@ export function createMessageBox(message) {
     } else {
         messageBubble.textContent = message.image;
     }
-
     messageBubbleContent.appendChild(messageBubble);
     
     if (message.edited) {
@@ -52,6 +52,8 @@ export function createMessageBox(message) {
                 span.textContent = data.name;
             }
             span.classList.add('message-user-name');
+            span.name = 'message-user';
+            span.id = message.sender;
             messageWrapper.insertBefore(span, messageBubbleWrapper);
 
             const image = document.createElement('img');
@@ -73,6 +75,7 @@ export function createMessageBox(message) {
     return messageWrapper;
 }
 
+//sends the messages and creates the bubble
 export function createSendMessage(message, channelId) {
     const token = localStorage.getItem('token');
     const userId = localStorage.getItem('userId');
@@ -98,6 +101,7 @@ export function createSendMessage(message, channelId) {
     });
 }
 
+//creates the form when pressing on a message, actions such as reacting can appear
 export function createMessageForm(messageId, messageContent, channelId) {
     const token = localStorage.getItem('token');
     const userId = localStorage.getItem('userId');
@@ -192,6 +196,54 @@ export function createMessageForm(messageId, messageContent, channelId) {
     closePopUp(popInfo.close, popInfo.container.id);
 }
 
+
+//shows the user information when pressing from the message page
+export function createUserForm(userId) {
+    const token = localStorage.getItem('token');
+    blurBackground(base);
+
+    const popInfo = createPopUp();
+    popInfo.box.style.rowGap = 30 + 'px';
+
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('user-click-form-wrapper');
+    popInfo.box.appendChild(wrapper);
+
+    getUser(token, userId)
+    .then((data) => {
+        if (data.error) {
+            popUpError(data.error);
+        } else {
+            const img = document.createElement('img');
+            console.log(data.image);
+            if (data.image) {
+                img.src = data.image;
+            } else {
+                img.src = '../img/default.jpeg';
+            }
+            wrapper.appendChild(img);
+
+            const container = document.createElement('div');
+            container.classList.add('user-click-form-container');
+            wrapper.appendChild(container);
+
+            const nameSpan = document.createElement('span');
+            nameSpan.textContent = 'Name: ' + data.name;
+            container.appendChild(nameSpan);
+
+            const bioSpan = document.createElement('span');
+            bioSpan.textContent = 'Bio: ' + data.bio;
+            container.appendChild(bioSpan);
+
+            const emailSpan = document.createElement('span');
+            emailSpan.textContent = 'Email: ' + data.email;
+            container.appendChild(emailSpan);
+        }
+    });
+    closePopUp(popInfo.close, popInfo.container.id);
+}
+
+//deletes a message displayed on the page
 function deleteButtonListener(messageId, channelId) {
     const token = localStorage.getItem('token');
     const button = document.getElementById('message-delete-button');
@@ -202,6 +254,7 @@ function deleteButtonListener(messageId, channelId) {
     });
 }
 
+//updates the messages and displays it
 function updateButtonListener(messageId, channelId) {
     const token = localStorage.getItem('token');
     const editForm = document.getElementById('message-update');
@@ -229,6 +282,7 @@ function updateButtonListener(messageId, channelId) {
     });
 }
 
+//reacts to the message
 function reactListener(messageId, channelId, type, messageContent) {
     const token = localStorage.getItem('token');
     const button = document.getElementById(type);

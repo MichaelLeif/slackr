@@ -85,6 +85,7 @@ export function createLogin() {
                 clear();
                 localStorage.setItem('token', data.token);
                 localStorage.setItem('userId', data.userId);
+                localStorage.setItem('password', pinput.value);
                 mainMenu(data.token, data.userId);
             }
         }); 
@@ -191,6 +192,7 @@ export function createRegister() {
                     console.log(data.token);
                     localStorage.setItem('token', data.token);
                     localStorage.setItem('userId', data.userId);
+                    localStorage.setItem('password', pinput.value);
                     mainMenu(data.token, data.userId);
                 }
             });

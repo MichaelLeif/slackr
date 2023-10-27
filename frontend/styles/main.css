@@ -264,3 +264,13 @@
 .user-container > label {
     color: black;
 }
+
+@media screen and (max-width: 1000px) {
+    .side-bar-container {
+        width: 100%;
+    }
+
+    .user-container, .user-wrapper {
+        width: 200px;
+    }
+}

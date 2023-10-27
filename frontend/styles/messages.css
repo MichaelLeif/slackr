@@ -48,9 +48,10 @@
 }
 
 .message-timer-bubble {
-    width: 100px;
-    height: 50px;
-    margin-left: 20px;
+    width: auto;
+    height: auto;
+    max-width: 100px;
+    margin-left: 10px;
     color: black;
     align-self: flex-end;
 }
@@ -73,6 +74,37 @@
     color: black;
 }
 
+.user-click-form-wrapper {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.user-click-form-wrapper img {
+    width: 100px;
+    height: 100px;
+}
+
+.user-click-form-container {
+    display: flex;
+    width: 200px;
+    height: 100px;
+    flex-direction: column;
+}
+
 #react-form label {
     font-size: 50px;
+}
+
+@media screen and (max-width: 500px) {
+    .user-click-form-wrapper input {
+        width: 200px !important;
+        margin: 0px !important;
+    }
+
+    .auth-form div {
+        margin: 0px !important;
+    }
 }

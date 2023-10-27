@@ -18,6 +18,16 @@ label {
     font-weight: bold;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
+.side-bar-action {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
 .icon {
     color: white;
 }
@@ -73,4 +83,23 @@ label {
 .close-btn:hover {
     cursor: pointer;
     opacity: 0.5;
+}
+
+@media screen and (max-width: 500px) {
+    .pop-up-container {
+        left: 50px;
+        width: 200px !important;
+    }
+    
+    .pop-up-box {
+        width: 200px !important;
+    }
+
+    .pop-up-box input {
+        width: 150px;
+    }
+
+    .pop-up-box select {
+        width: 150px !important;
+    }
 }
