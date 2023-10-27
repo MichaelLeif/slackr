@@ -1,0 +1,110 @@
+.message-wrapper {
+   display: flex;
+   width: auto;
+   height: auto;
+   flex-direction: column;
+}
+
+.message-bubble-wrapper {
+    display: flex;
+    width: auto;
+    height: auto;
+}
+
+.message-bubble-content {
+    display: flex;
+    align-items: center;
+    width: auto;
+    max-width: 500px;
+    height: auto;
+    padding: 10px;
+    background: darkslategrey;
+    margin: 5px 0px;
+    border-radius: 10px;
+}
+
+.message-bubble-content > span {
+    color: white;
+    line-height: 30px;
+}
+
+.message-bubble-content > span:hover {
+    cursor: pointer;
+}
+
+.message-user-name {
+    margin-left: 70px;
+    color: black;
+    font-weight: bold;
+}
+
+.message-user-bubble {
+    width: 50px;
+    height: 50px;
+    margin: 5px 0px;
+    margin-right: 20px;
+    border-radius: 20px;
+    align-self: flex-end;
+}
+
+.message-timer-bubble {
+    width: auto;
+    height: auto;
+    max-width: 100px;
+    margin-left: 10px;
+    color: black;
+    align-self: flex-end;
+}
+
+.message-edited {
+    width: auto;
+    height: auto;
+    max-width: 300px;
+    color: black;
+    margin-left: 70px;
+    margin-bottom: 20px;
+}
+
+.message-loading {
+    font-size: 50px;
+    font-weight: bold;
+    width: auto;
+    align-self: center;
+    margin: 50px 0;
+    color: black;
+}
+
+.user-click-form-wrapper {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.user-click-form-wrapper img {
+    width: 100px;
+    height: 100px;
+}
+
+.user-click-form-container {
+    display: flex;
+    width: 200px;
+    height: 100px;
+    flex-direction: column;
+}
+
+#react-form label {
+    font-size: 50px;
+}
+
+@media screen and (max-width: 500px) {
+    .user-click-form-wrapper input {
+        width: 200px !important;
+        margin: 0px !important;
+    }
+
+    .auth-form div {
+        margin: 0px !important;
+    }
+}

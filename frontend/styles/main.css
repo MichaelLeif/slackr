@@ -1,0 +1,276 @@
+.wrapper-main {
+    padding-left: 500px;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.main-page-container {
+    position: fixed;
+    background: transparent;
+    padding-left: 500px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    overflow: scroll;
+}
+
+.main-page-header-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 96%;
+    height: 10%;
+    margin: 18.5px 18.5px;
+    border-radius: 10px;
+    background: white;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.main-page-header-container {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-page-button-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.main-page-header-container-channel-name {
+    width: 500px;
+    height: 100%;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.main-page-header-container-button {
+    width: 100px;
+    height: 20px;
+}
+
+.main-page-header-container-button:hover {
+    cursor: pointer;
+}
+
+.main-page-messages-wrapper {
+    position: relative;
+    width: 100%;
+    height: 70%;
+    background: lightgreen;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.main-page-messages-container {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column-reverse;
+    padding: 20px 20px;
+}
+
+.main-page-input-container {
+    width: 1000px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-page-input-wrapper {
+    background: white;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+}
+
+.side-bar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 500px;
+    height: 100%;
+    padding: 10px;
+    background: rgb(48, 51, 56);
+    box-sizing: border-box;
+    overflow: scroll;
+}
+
+.main-page-message-input {
+    width: 80%;
+    height: 30px;
+}
+
+.side-bar-header-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side-bar-header {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.side-bar-buttons {
+    display: flex;
+    width: auto;
+    height: auto;
+    justify-content: space-between;
+    column-gap: 20px;
+}
+
+.side-bar-channel-header {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.side-bar-btn {
+    width: 120px;
+    height: 30px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.side-bar-btn:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.side-bar-button-profile {
+    width: 100px;
+    border: none;
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.side-bar-button-profile:hover {
+    cursor: pointer;
+}
+
+.create-channel:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.channel-box-button {
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+}
+
+.channel-box-button:hover span {
+    color: white;
+}
+
+.show-more-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+}
+
+.side-bar-channel-box {
+    width: 400px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: transparent;
+    margin-bottom: 40px;
+}
+
+.side-bar-channel-box span {
+    font-size: 15px;
+    color: black
+}
+
+.side-bar-channel-box button:hover {
+    cursor: pointer;
+    background-color: green;
+}
+
+.side-bar-clicker {
+    width: 400px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    margin-bottom: 30px;
+}
+
+.side-bar-clicker button {
+    width: 50px;
+    height: 30px;
+}
+
+.side-bar-clicker button:hover {
+    cursor: pointer;
+}
+
+.user-wrapper {
+    width: 404px;
+    height: 100px;
+    overflow: auto;
+    background: white;
+}
+
+.user-container {
+    width: 100%;
+    height: auto;
+}
+
+.user-container > label {
+    color: black;
+}
+
+@media screen and (max-width: 1000px) {
+    .side-bar-container {
+        width: 100%;
+    }
+
+    .user-container, .user-wrapper {
+        width: 200px;
+    }
+}
