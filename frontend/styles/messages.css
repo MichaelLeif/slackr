@@ -1,0 +1,78 @@
+.message-wrapper {
+   display: flex;
+   width: auto;
+   height: auto;
+   flex-direction: column;
+}
+
+.message-bubble-wrapper {
+    display: flex;
+    width: auto;
+    height: auto;
+}
+
+.message-bubble-content {
+    display: flex;
+    align-items: center;
+    width: auto;
+    max-width: 500px;
+    height: auto;
+    padding: 10px;
+    background: darkslategrey;
+    margin: 5px 0px;
+    border-radius: 10px;
+}
+
+.message-bubble-content > span {
+    color: white;
+    line-height: 30px;
+}
+
+.message-bubble-content > span:hover {
+    cursor: pointer;
+}
+
+.message-user-name {
+    margin-left: 70px;
+    color: black;
+    font-weight: bold;
+}
+
+.message-user-bubble {
+    width: 50px;
+    height: 50px;
+    margin: 5px 0px;
+    margin-right: 20px;
+    border-radius: 20px;
+    align-self: flex-end;
+}
+
+.message-timer-bubble {
+    width: 100px;
+    height: 50px;
+    margin-left: 20px;
+    color: black;
+    align-self: flex-end;
+}
+
+.message-edited {
+    width: auto;
+    height: auto;
+    max-width: 300px;
+    color: black;
+    margin-left: 70px;
+    margin-bottom: 20px;
+}
+
+.message-loading {
+    font-size: 50px;
+    font-weight: bold;
+    width: auto;
+    align-self: center;
+    margin: 50px 0;
+    color: black;
+}
+
+#react-form label {
+    font-size: 50px;
+}

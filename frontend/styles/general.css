@@ -1,0 +1,76 @@
+/* base styles, feel free to edit */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: -apple-system, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: darkslategrey;
+}
+
+span {
+    color: white;
+    font-size: 15px;
+}
+
+label {
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.icon {
+    color: white;
+}
+
+.pop-up-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop-up-box {
+    position: relative;
+    width: 500px;
+    height: 200px;
+    padding: 30px;
+    background: rgb(48, 51, 56);
+    border-radius: 5px;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop-up-box span {
+    color: white;
+}
+
+.pop-up-box span {
+    margin-bottom: 10px;
+}
+
+.pop-up-header {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: transparent;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.close-btn:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
